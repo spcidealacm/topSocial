@@ -1,0 +1,25 @@
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --- Foundation --- */
+@import "src/css/foundation/common.css";
+@import "src/css/foundation/keyframe.css";
+
+/* --- Components --- */
+@import "src/css/components/search.css";
+@import "src/css/components/button.css";
+@import "src/css/components/profile.css";
+
+/* --- Frames --- */
+@import "src/css/frames/nav/nav.css";
+@import "src/css/frames/main/main.css";
+
+/* Left */
+@import "src/css/frames/main/left/main_left.css";
+@import "src/css/frames/main/left/main_left_side.css";
+/* Middle */
+@import "src/css/frames/main/middle/main_middle.css";
+@import "src/css/frames/main/middle/main_middle_highline.css";
+@import "src/css/frames/main/middle/main_middle_post.css";
+@import "src/css/frames/main/middle/main_middle_card.css";
+/* Right */

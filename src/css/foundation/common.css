@@ -1,0 +1,45 @@
+/* --- Basic --- */
+:root {
+  --color-white: #f5f5f3;
+  --color-black: #1c2033;
+  --color-gray: #8f8f93;
+  --color-primary: #08979c;
+}
+
+html,
+body {
+  /* text-align: center; */
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--color-white);
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-window-dragging: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Common --- */
+.container {
+  width: 80%;
+  max-width: 1920px;
+  margin: 0 auto;
+}

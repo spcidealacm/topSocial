@@ -1,0 +1,41 @@
+:root {
+  --left-profile-background-color: #fff;
+  --left-profile-padding: 1rem;
+  --left-profile-radius: 1rem;
+}
+
+.main-left {
+  position: relative;
+  height: 100vh;
+  min-width: 200px;
+  overflow-x: hidden;
+}
+
+.main-left h2 {
+  font-size: 0.9rem;
+}
+
+.main-left .profile {
+  display: flex;
+  align-items: center;
+  padding: var(--left-profile-padding);
+  background: var(--left-profile-background-color);
+  border-radius: var(--left-profile-radius);
+  column-gap: 1rem;
+  width: 100%;
+}
+
+.main-left .profile p {
+  font-size: 0.7rem;
+}
+
+.main-left .close-btn {
+  display: none;
+}
+
+.main-left .btn {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}

@@ -1,0 +1,36 @@
+/* --- Nav --- */
+:root {
+  --nav-background-color: #fff;
+}
+
+nav {
+  display: block;
+  position: fixed;
+  z-index: 999;
+
+  width: 100%;
+  top: 0;
+  padding: 0.7rem 0;
+
+  background: var(--nav-background-color);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .container .logo {
+  text-transform: uppercase;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+nav .container .create {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
