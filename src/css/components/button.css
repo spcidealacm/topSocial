@@ -1,24 +1,30 @@
 /* --- Button --- */
 :root {
-	--btn-padding: 0.6rem 2rem;
-	--btn-border-radius: 2rem;
+  --btn-padding: 0.6rem 2rem;
+  --btn-border-radius: 2rem;
 }
 
 .btn {
-	display: inline-block;
-	padding: var(--btn-padding);
-	font-weight: 500;
-	border-radius: var(--btn-border-radius);
-	cursor: pointer;
-	transition: all 300ms ease;
-	font-size: 0.9rem;
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-weight: 500;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
 }
 
 .btn-primary {
-	background: var(--color-primary);
-	color: var(--color-white);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-cancel {
+  background: var(--color-white);
+  box-shadow: 0 0 1px var(--color-gray);
+  color: var(--color-black);
 }
 
 .btn:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }

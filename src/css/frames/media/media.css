@@ -1,0 +1,29 @@
+@media screen and (max-width:1200px) {
+  .main-left {
+    display: none;
+  }
+
+  main .container {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto 30vw;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .main-left {
+    display: none;
+  }
+
+  .main-right {
+    display: none;
+  }
+
+  main .container {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto;
+    column-gap: 2rem;
+  }
+}

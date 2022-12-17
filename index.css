@@ -23,3 +23,9 @@
 @import "src/css/frames/main/middle/main_middle_post.css";
 @import "src/css/frames/main/middle/main_middle_card.css";
 /* Right */
+@import "./src/css/frames/main/right/main_right.css";
+@import "./src/css/frames/main/right/main_right_message.css";
+@import "./src/css/frames/main/right/main_right_request.css";
+
+/* Media */
+@import "./src/css/frames/media/media.css"

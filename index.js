@@ -1,5 +1,6 @@
 import "./index.css"
-import { profile, highline, card } from "./src/data/db.json"
+import { cards, message, request, profile, highline } from "./data/db.json"
+// import { cards, message, request, profile, highline } from "@/js/database"
 import {
   navbar_container_logo,
   navbar_container_create_img,
@@ -15,7 +16,9 @@ import {
   create_profile_structure,
   create_picture_structure,
   create_control_structure,
-  create_comment_structure
+  create_comment_structure,
+  create_friend_list,
+  create_request_list
 } from "./src/js/common"
 
 /* NAV */
@@ -38,16 +41,16 @@ middle_highline_description_p.forEach((element, index) => {
   element.innerHTML = highline.description[index]
 });
 middle_highline_description_img.forEach((element, index) => {
-  element.src = `./src/images/profile/profile_${index + 2}.png`
+  element.src = `/images/profile/profile_${index + 2}.png`
 })
 middle_highline_description.forEach((element, index) => {
-  element.style.backgroundImage = `url("./src/images/highline/highline_${index + 1}.jpeg")`
+  element.style.backgroundImage = `url("/images/highline/highline_${index + 1}.jpeg")`
 })
 
 // CARD
 const cardDom = document.querySelector('.card')
 
-card.forEach(element => {
+cards.forEach(element => {
   const doms = create_news()
   cardDom.appendChild(doms.info)
   create_profile_structure(doms.info_profile, element.profile)
@@ -55,3 +58,12 @@ card.forEach(element => {
   create_control_structure(doms.info_control, element.control)
   create_comment_structure(doms.info_comment, element.comment)
 })
+
+
+//Message
+const messageDom = document.querySelector('.friend-list')
+create_friend_list(messageDom, message)
+
+//Request
+const requestDom = document.querySelector('.request-list')
+create_request_list(requestDom, request)

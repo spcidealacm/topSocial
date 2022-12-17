@@ -144,3 +144,64 @@ export const create_comment_structure = (comment_dom, info) => {
   comment_dom.appendChild(viewBtn)
 }
 /* Main Right */
+export const create_friend_list = (friend_list_dom, info) => {
+  info.forEach(friend => {
+    const profile = document.createElement('div')
+    profile.classList.add('profile')
+    profile.innerHTML = `
+      <div class="profile-photo">
+        <img alt="profile photo" />
+      </div>
+      <div class="profile-description">
+        <h2></h2>
+        <p></p>
+      </div>
+    `
+    profile.querySelector('img').src = friend.src
+    profile.querySelector('h2').textContent = friend.name
+    profile.querySelector('p').textContent = friend.msg
+    friend_list_dom.appendChild(profile)
+  })
+}
+
+export const create_request_list = (request_list_dom, info) => {
+  info.forEach(element => {
+    const request = document.createElement('div')
+    request.classList.add('request')
+
+    /* Add Profile */
+    const profile = document.createElement('div')
+    profile.classList.add('profile')
+    profile.innerHTML = `
+      <div class="profile-photo">
+        <img alt="profile photo" />
+      </div>
+      <div class="profile-description">
+        <h2></h2>
+        <p></p>
+      </div>
+    `
+    profile.querySelector('img').src = element.src
+    profile.querySelector('h2').textContent = element.name
+    profile.querySelector('p').textContent = `${element.mutualFriendNum} Mutual friends`
+    request.appendChild(profile)
+
+
+    /* Add Button Group */
+
+    const btnGroup = document.createElement('div')
+    btnGroup.classList.add('request-btn-group')
+    const accept = document.createElement('span')
+    accept.className = 'btn btn-primary'
+    accept.textContent = 'Accept'
+    const decline = document.createElement('span')
+    decline.className = 'btn btn-cancel'
+    decline.textContent = 'Decline'
+
+    btnGroup.appendChild(accept)
+    btnGroup.appendChild(decline)
+    request.appendChild(btnGroup)
+
+    request_list_dom.appendChild(request)
+  })
+}
